@@ -4,7 +4,7 @@ function buscarCodigo() {
 
     document.getElementById("resultado").innerHTML = "Buscando...";
 
-    fetch("https://165.22.186.85/buscar.php", {
+    fetch("https://api.wolfnetcodigos.online/buscar.php", {
         method: "POST",
         headers: {"Content-Type": "application/x-www-form-urlencoded"},
         body: "correo=" + correo + "&token=" + token
