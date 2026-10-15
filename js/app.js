@@ -1,13 +1,13 @@
 function buscarCodigo() {
     let correo = document.getElementById("correo").value;
-    let clave = document.getElementById("clave").value;
+    let token  = document.getElementById("token").value;
 
     document.getElementById("resultado").innerHTML = "Buscando...";
 
     fetch("https://165.22.186.85/buscar.php", {
         method: "POST",
         headers: {"Content-Type": "application/x-www-form-urlencoded"},
-        body: "correo=" + correo + "&clave=" + clave
+        body: "correo=" + correo + "&token=" + token
     })
     .then(r => r.json())
     .then(data => {
@@ -24,4 +24,3 @@ function buscarCodigo() {
             "Error de conexión con el servidor.";
     });
 }
-
